@@ -1,0 +1,7 @@
+1. pasar el proyecto dde bitbucket a github para integracion con jenkins
+2. investigar como se hace esa integracion
+3. crear proyecto de automatizacion independiente
+4. ver como putas es la aplicacion
+5. crear comandos maven para la app y para automatizacion
+6. crear el proyecto/job en jenkins
+7. crear ppt
