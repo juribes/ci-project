@@ -16,6 +16,7 @@ public class WebAppSteps extends CommonMethods {
         createDriver();
         goToUrl("http://localhost:8090/");
         homePage = new HomePage(driver);
+        Assert.assertEquals(homePage.welcomeHeader.getText(), "Welcome");
     }
 
     @When("^I click the button$")

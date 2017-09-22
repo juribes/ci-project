@@ -17,9 +17,4 @@ public class AutomationBasePage {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 40), this);
     }
 
-    @After
-    public void close_browser(Scenario scenario) throws Throwable {
-        driver = getDriver();
-        quitDriver();
-    }
 }
