@@ -37,18 +37,18 @@
         <!-- Cucumber -->
         <dependency>
             <groupId>info.cukes</groupId>
-            <artifactId>cucumber-core</artifactId>
-            <version>1.2.2</version>
+            <artifactId>cucumber-spring</artifactId>
+            <version>1.2.4</version>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.2.2</version>
+            <version>1.2.4</version>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>1.2.2</version>
+            <version>1.2.4</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

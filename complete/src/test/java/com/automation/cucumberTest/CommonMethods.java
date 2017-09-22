@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 
-public class CommonMethods {
+public class CommonMethods extends SpringIntegrationTest {
     public static WebDriver driver;
     public AboutPage aboutPage;
     public ContactPage contactPage;

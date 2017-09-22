@@ -1,9 +1,6 @@
 package com.automation.cucumberTest.steps;
 import com.automation.cucumberTest.CommonMethods;
-import com.automation.cucumberTest.pages.AboutPage;
-import com.automation.cucumberTest.pages.ContactPage;
-import com.automation.cucumberTest.pages.GreetingPage;
-import com.automation.cucumberTest.pages.HomePage;
+import com.automation.cucumberTest.pages.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,9 +10,9 @@ public class WebAppSteps extends CommonMethods {
 
     @Given("^I am in home$")
     public void i_am_in_home() throws Throwable {
-        createDriver();
-        goToUrl("http://localhost:8090/");
-        homePage = new HomePage(driver);
+        CommonMethods.createDriver();
+        CommonMethods.goToUrl("http://localhost:8090/");
+        homePage = new HomePage(CommonMethods.driver);
         Assert.assertEquals(homePage.welcomeHeader.getText(), "Welcome");
     }
 
@@ -26,9 +23,9 @@ public class WebAppSteps extends CommonMethods {
 
     @Then("^I get the message \"(.*?)\"$")
     public void i_get_the_message(String message) throws Throwable {
-        greetingPage = new GreetingPage(driver);
+        greetingPage = new GreetingPage(CommonMethods.driver);
         Assert.assertEquals(greetingPage.greetingMessage.getText(), message);
-        quitDriver();
+        CommonMethods.quitDriver();
     }
 
     @When("^I type \"(.*?)\" in the input box$")
@@ -43,9 +40,9 @@ public class WebAppSteps extends CommonMethods {
 
     @Then("^I will see the About us page$")
     public void i_will_see_the_About_us_page() throws Throwable {
-        aboutPage = new AboutPage(driver);
+        aboutPage = new AboutPage(CommonMethods.driver);
         Assert.assertEquals(aboutPage.pageHeader.getText(),"About us");
-        quitDriver();
+        CommonMethods.quitDriver();
     }
 
     @When("^I click the link Contact us$")
@@ -55,9 +52,9 @@ public class WebAppSteps extends CommonMethods {
 
     @Then("^I will see the Contact us page$")
     public void i_will_see_the_Contact_us_page() throws Throwable {
-        contactPage = new ContactPage(driver);
+        contactPage = new ContactPage(CommonMethods.driver);
         Assert.assertEquals(contactPage.pageHeader.getText(),"Contact us");
-        quitDriver();
+        CommonMethods.quitDriver();
     }
 
     @When("^I click the link Our Services$")
@@ -67,9 +64,9 @@ public class WebAppSteps extends CommonMethods {
 
     @Then("^I will see the Our Services page$")
     public void i_will_see_the_Our_Services_page() throws Throwable {
-        contactPage = new ContactPage(driver);
-        Assert.assertEquals(contactPage.pageHeader.getText(),"Services");
-        quitDriver();
+        servicesPage = new ServicesPage(CommonMethods.driver);
+        Assert.assertEquals(servicesPage.pageHeader.getText(),"Services");
+        CommonMethods.quitDriver();
     }
 
 }
